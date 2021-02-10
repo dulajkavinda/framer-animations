@@ -12,6 +12,10 @@ const containerVariants = {
     x: "100vw",
     opacity: 0,
   },
+  exit: {
+    x: "-100vh",
+    transition: { ease: "easeInOut" },
+  },
 };
 const buttonVariant = {
   hover: {
@@ -40,6 +44,7 @@ const Toppings = ({ addTopping, pizza }) => {
       variants={containerVariants}
       initial="inactive"
       animate="active"
+      exit="exit"
       className="toppings container"
     >
       <h3>Step 2: Choose Toppings</h3>
